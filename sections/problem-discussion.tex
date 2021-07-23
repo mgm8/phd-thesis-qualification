@@ -41,10 +41,16 @@
     \item FPGA
 \end{itemize}
 
+Nvidia Jetson is a series of embedded computing boards from Nvidia, based on a Tegra SoC that integrates an ARM CPU. Jetson is a low-power system and is designed for accelerating machine learning applications.
+
 \subsection{Descrição de hardware}
 
-Guppy GPU \cite{al-dujaili2012}
-
-NOEL-V \cite{andersson2020}
+Guppy \cite{al-dujaili2012} (GPU-like cUstomizable Parallel Processor prototYpe) is based on an existing general purpose parameterizable soft core, namely the LEON3.
 
 RISC-V \cite{waterman2016}
+
+The NOEL-V \cite{andersson2020} is a synthesizable VHDL model of a processor that implements the RISC-V architecture. The processor is the first released model in our RISC-V line of processors that complement the LEON line of processors.
+
+The NOEL-V can be implemented as a dual-issue processor, allowing up to two instructions per cycle to be executed in parallel. To support the instruction issue rate of the pipeline, the NOEL-V has advanced branch prediction capabilities. The cache controller of the NOEL-V supports a store buffer FIFO with one cycle per store sustained throughput, and wide AHB slave support to enable fast stores and fast cache refill.
+
+The NOEL-V is interfaced using the AMBA 2.0 AHB bus (subsystem with Level-2 cache and AXI4 backend is also available) and supports the IP core plug\&play method provided in the our IP library (GRLIB). The processor can be efficiently implemented on FPGA and ASIC technologies and uses standard synchronous memory cells for caches and register file.
