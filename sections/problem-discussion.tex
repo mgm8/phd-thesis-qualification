@@ -1,9 +1,9 @@
 %
 % problem-discussion.tex
 %
-% Copyright (C) 2021 by Universidade Federal de Santa Catarina.
+% Copyright (C) 2022 by Universidade Federal de Santa Catarina.
 %
-% On-Board Data Processing Techniques to Improve the Performance of Small Satellites
+% GNSS Networks Based on Small Satellites
 %
 % This work is licensed under the Creative Commons Attribution-ShareAlike 4.0
 % International License. To view a copy of this license,
@@ -22,35 +22,10 @@
 
 \section{Problem Discussion} \label{sec:problem-discussion}
 
-\cite{marcelino2018}
+Os sistemas de navegação global por satélite atualmente são largamente utilizados por diversos dispositivos, incluindo desde sistemas complexos como aeronaves, satélites e foguetes, até disponíveis mais simples de uso geral como celulares, computadores, rastreadores de veículos, etc.
 
-\cite{marcelino2016}
+Atualmente existem N diferentes redes em operação, sendo um tipo de tecnologia dominada por poucos países do mundo. Todas as redes atuais operam com a utilização de satélites de grande porte e operando em órbitas baixas e médias (LEO e MEO).
 
-\begin{itemize}
-    \item IA embarcada
-    \item Voo em formação
-    \item Constelação de nanossatélites
-    \item Processamento distribuído (constelação)
-\end{itemize}
+Com o surgimento e ascenção dos pequenos satélites, em especial os CubeSats, na última década, surge também a possibilidade de utilizar satélites de menor porte, mais simples e de menor custo para aplicações que anteriormente só poderiam ser solucionadas com satélites de grande porte e custo elevado.
 
-\subsection{Processing Hardware}
-
-\begin{itemize}
-    \item Nvidia Jetson
-    \item Intel Movidius
-    \item FPGA
-\end{itemize}
-
-Nvidia Jetson is a series of embedded computing boards from Nvidia, based on a Tegra SoC that integrates an ARM CPU. Jetson is a low-power system and is designed for accelerating machine learning applications.
-
-\subsection{Descrição de hardware}
-
-Guppy \cite{al-dujaili2012} (GPU-like cUstomizable Parallel Processor prototYpe) is based on an existing general purpose parameterizable soft core, namely the LEON3.
-
-RISC-V \cite{waterman2016}
-
-The NOEL-V \cite{andersson2020} is a synthesizable VHDL model of a processor that implements the RISC-V architecture. The processor is the first released model in our RISC-V line of processors that complement the LEON line of processors.
-
-The NOEL-V can be implemented as a dual-issue processor, allowing up to two instructions per cycle to be executed in parallel. To support the instruction issue rate of the pipeline, the NOEL-V has advanced branch prediction capabilities. The cache controller of the NOEL-V supports a store buffer FIFO with one cycle per store sustained throughput, and wide AHB slave support to enable fast stores and fast cache refill.
-
-The NOEL-V is interfaced using the AMBA 2.0 AHB bus (subsystem with Level-2 cache and AXI4 backend is also available) and supports the IP core plug\&play method provided in the our IP library (GRLIB). The processor can be efficiently implemented on FPGA and ASIC technologies and uses standard synchronous memory cells for caches and register file.
+Especificamente sobre as redes de GNSS, o uso de satélites de pequeno porte pode agregar inúmeras vantagens, sendo umas das principais a redução de custo (tanto de desenvolvimento e operação), e 
