@@ -20,18 +20,13 @@
 % \date 2019/11/30
 %
 
-\documentclass[journal]{IEEEtran}
+\documentclass[a4paper,12pt]{book}
 
-\usepackage{article}
+\usepackage{thesis}
 
 \title{GNSS Networks Based on Small Satellites}
-\author{Gabriel M. Marcelino, Eduardo A. Bezerra
-	\thanks{
-	Gabriel Mariano Marcelino, UFSC, Brazil, (email: \href{mailto:gabriel.marcelino@spacelab.ufsc.br}{gabriel.marcelino@spacelab.ufsc.br})
-
-	Eduardo A. Bezerra, UFSC, Brazil, (email: \href{mailto:eduardo.bezerra@ufsc.br}{eduardo.bezerra@ufsc.br})
-	}}
-\date{}
+\author{Gabriel Mariano Marcelino}
+\date{\today}
 
 \hypersetup
 {
@@ -43,22 +38,34 @@
 
 \begin{document}
 
-    \maketitle
+    \pagenumbering{roman}
+    \setcounter{page}{1}
 
-    \begin{abstract}
-        Abstract...
-    \end{abstract}
+    \input{header/titlepage}
+    \cleardoublepage
+    \input{header/abstract}
+    \cleardoublepage
 
-    \begin{IEEEkeywords}
-        Embedded Systems, GNSS, Satellites.
-    \end{IEEEkeywords}
+    \listoffigures
+    \addcontentsline{toc}{chapter}{List of Figures}
 
-    \input{sections/introduction}
-    \input{sections/related-work}
-    \input{sections/problem-discussion}
-    \input{sections/proposed-work}
-    \input{sections/conclusion}
-    \input{sections/acknowledgements}
-    \input{references/references}
+    \listoftables
+    \addcontentsline{toc}{chapter}{List of Tables}
+
+    \printnomenclature
+    \addcontentsline{toc}{chapter}{Nomenclature}
+
+    \tableofcontents
+    \cleardoublepage
+
+    \pagenumbering{arabic}
+    \setcounter{page}{1}
+
+    \include{chapters/introduction}
+    \include{chapters/related-work}
+    \include{chapters/problem-discussion}
+    \include{chapters/proposed-work}
+    \include{chapters/conclusion}
+    \include{references/references}
 
 \end{document}
