@@ -10,6 +10,9 @@ all:
 	mkdir -p $(BUILD_DIR)
 	latexmk -pdf -jobname=$(BUILD_DIR)/$(TARGET) $(SRC).tex
 
+index:
+	makeindex $(BUILD_DIR)/$(TARGET).nlo -s nomencl.ist -o $(BUILD_DIR)/$(TARGET).nls
+
 loop:
 	latexmk -pvc -pdf -halt-on-error -jobname=$(BUILD_DIR)/$(TARGET) $(SRC).tex
 
