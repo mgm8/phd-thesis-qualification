@@ -69,7 +69,7 @@ d = \sqrt{2\cdot 6378\cdot 550 + 550^{2}} = \mathbf{2705\ km}
 
 \subsubsection{Free-Space Path Loss}
 
-The free-space path loss ($FSPL$) can be calculated using \autoref{eq:fspl}.
+The free-space path loss ($FSPL$\nomenclature{\textbf{FSPL}}{Free-Space Path Loss}) can be calculated using \autoref{eq:fspl}.
 
 \begin{equation} \label{eq:fspl}
 FSPL = \left( \frac{4\pi d f}{c} \right)^{2}
@@ -139,7 +139,7 @@ Considering the worst scenario with the maximum possible distance between the sa
 
 \subsubsection{Signal-to-Noise-Ratio}
 
-The Signal-to-Noise-Ratio (SNR) of a transmitted signal at the receiver can be expressed using \autoref{eq:snr}:
+The Signal-to-Noise-Ratio (SNR\nomenclature{\textbf{SNR}}{Signal-to-Noise-Ratio}) of a transmitted signal at the receiver can be expressed using \autoref{eq:snr}:
 
 \begin{equation} \label{eq:snr}
     SNR = \frac{E_{b}}{N_{0}} = \frac{P_{t}G_{t}G_{r}}{kT_{s}RL_{p}}
@@ -297,8 +297,6 @@ Typical operating voltages, and current and power ranges consumed by each satell
         EPS (heater)        & 7,4   & 675   & 675   & 5000  & 5000 \\
         Antenna module      & 3,3   & 60    & 550   & 200   & 1800 \\
         Payload EDC         & 5     & 250   & 250   & 1250  & 1250 \\
-        Payload-X           & 5     & TBD   & TBD   & TBD   & TBD \\
-        Payload Harsh       & 3,3   & TBD   & TBD   & TBD   & TBD \\
         \bottomrule[1.5pt]
     \end{tabular}
     \caption{Power requirements of the subsystems and payloads of the satellite.}
@@ -395,7 +393,7 @@ The \autoref{fig:fsat2-gmat} shows the 3D representation of the FloripaSat-2 orb
 
 The next sections present some analysis based on the results obtained on the simulations executed on GMAT.
 
-The source files of the GMAT simulation are available in \cite{fsat2-mechanical}.
+%The source files of the GMAT simulation are available in \cite{fsat2-mechanical}.
 
 \subsubsection{Lifetime Analysis}
 
