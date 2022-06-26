@@ -23,7 +23,7 @@
 
 \chapter{Related Work} \label{ch:related-work}
 
-Este capítulo apresenta um resumo dos principais trabalhos relacionados a situação atual das redes de GNSS no mundo, apresentando-se o histórico e status das redes atualmente em operação, e projetos atualmente em andamento e que possivelmente serão implementados ou entraram em operação no futuro, tanto com a utilização de satélites convencionais quanto com satélites de pequeno porte.
+Este capítulo apresenta um resumo dos principais trabalhos relacionados e a situação atual das redes de GNSS no mundo, apresentando-se o histórico e status das redes atualmente em operação, e projetos atualmente em andamento e que possivelmente serão implementados ou entraram em operação no futuro, tanto com a utilização de satélites convencionais quanto com satélites de pequeno porte.
 
 \section{Current GNSS networks}
 
@@ -35,7 +35,7 @@ Abaixo, encontra-se uma descrição de cada uma dessas redes.
 
 O GPS \cite{gps}, ou Global Positioning System, é o sistema de GNSS desenvolvido e mantido pelos Estados Unidos. Foi o primeiro sistema de navegação global por satélite a ser desenvolvido e entrar em operação, tendo o projeto sido iniciado em 19XX e os primeiros satélites lançados em 1978. A rede se tornou operacional em 1995 e teve custo total de 10 bilhões de dólares. Atualmente possuí 24 satélites em operação, operando a uma altitude de aproximadamente 20200 quilômetros e com a premissa de se ter sempre pelo menos quatro satélites cobrindo qualquer ponto do planeta.
 
-Até a década de 2000, o sistema possuía precisão propositalmente limitada para dispositivos de uso civil. Por questões de segurança, erros propositais eram induzidos aos sinais transmitidos de forma que receptores de uso geral não possuíssem precisão menor que 90 metros.
+Atualmente o sistema é de uso civil e militar, mas até a década de 2000, o sistema possuía precisão propositalmente limitada para dispositivos de uso civil, sendo seu uso em capacidade máxima destinado somente a aplicações militares. Por questões de segurança, erros propositais eram induzidos aos sinais transmitidos de forma que receptores de uso geral não possuíssem precisão menor que 90 metros.
 
 
 \subsection{GLONASS}
@@ -101,23 +101,67 @@ A \autoref{tab:networks-comparison} compara as principais características dos s
 
 \subsection{QZSS}
 
-Quasi-Zenith Satellite System \cite{qzss}
+The Quasi-Zenith Satellite System \cite{qzss} (QZSS, or also know as Michibiki) is a local positioning system developed by the Japanese government covering part of Asia and Oceania, focusing primordially on the japanese territory. The objective of this system is to improve the GPS system coverage in the region with higher stability and precision. Currently, the system is composed by four satellites (QZS-1, 2, 3 and 4) and it is compatible with the GPS, but an independent system is also planned to be operational with seven satellites in 2023.
 
-QZSS is a regional GNSS owned by the Government of Japan and operated by QZS System Service Inc. (QSS). QZSS complements GPS to improve coverage in East Asia and Oceania. Japan declared the official start of QZSS services in 2018 with 4 operational satellites, and plans to expand the constellation to 7 satellites by 2023 for autonomous capability.
-
-\subsection{IRNSS}
-
-Indian Regional Navigation Satellite System \cite{irnss}
-
-IRNSS is a regional GNSS owned and operated by the Government of India. IRNSS is an autonomous system designed to cover the Indian region and 1500 km around the Indian mainland. The system consists of 7 satellites. In 2016, India renamed IRNSS as the Navigation Indian Constellation (NavIC, meaning ``sailor'' or ``navigator'').
-
-\section{Experimental GNSS networks}
-
-\cite{aarestad2020}
+The QZSS operates with one geostationaty satellite and three in a Tundra highly inclined, slightly elliptical, geosynchronous orbit, with each satellite 120$^{\circ}$ apart from each other. quasi-zenith orbit (QZO\nomenclature{\textbf{QZO}}{Quasi-Zenith Orbit}) scheme. This orbit is illustrade in \autoref{fig:qzss-orbit}.
 
 \begin{figure}[!ht]
     \begin{center}
-        \includegraphics[width=\columnwidth]{figures/xona-satellite}
+        \includegraphics[width=0.8\columnwidth]{figures/qzss-orbit}
+        \caption{Quasi-Zenith orbit of the QZSS network \cite{qzss}.}
+        \label{fig:qzss-orbit}
+    \end{center}
+\end{figure}
+
+The orbital elements of the QZSS satellites are available in \autoref{tab:qzss-orbit-config}.
+
+\begin{table*}[!h]
+    \centering
+    \begin{tabular}{lc}
+        \toprule[1.5pt]
+        \textbf{Keplerian Elements} & \textbf{Value} \\
+        \midrule
+        Epoch                                   & 26 December 2009, 12:00 UTC \\
+        Semimajor                               & 42164 km \\
+        Eccentricity                            & $0,075 \pm 0,015$ \\
+        Inclination                             & $43 \pm 4^{\circ}$ \\
+        Right ascension of the ascending node   & $195^{\circ}$ \\
+        Argument of perigee                     & $270 \pm 2^{\circ}$ \\
+        Mean anomaly                            & $305^{\circ}$ \\
+        Central longitude of ground trace       & $135\ E \pm 5^{\circ}$ \\
+        \bottomrule[1.5pt]
+    \end{tabular}
+    \caption{Orbit configuration of the QZSS.}
+    \label{tab:qzss-orbit-config}
+\end{table*}
+
+\subsection{IRNSS}
+
+The IRNSS (Indian Regional Navigation Satellite System) \cite{irnss} is a regional and independent nagivation system developed and maintained by India, focusing on covering mainly its territory. This network is currently composed by a constellation of seven satellites, three in a geostationaty orbit, and four in a geosynchronous orbit.
+
+IRNSS is a regional GNSS owned and operated by the Government of India. IRNSS is an autonomous system designed to cover the Indian region and 1500 km around the Indian mainland. The system consists of 7 satellites. In 2016, India renamed IRNSS as the Navigation Indian Constellation (NavIC, meaning ``sailor'' or ``navigator'').
+
+\begin{figure}[!ht]
+    \begin{center}
+        \includegraphics[width=0.8\columnwidth]{figures/irnss}
+        \caption{IRNSS satellites and coverage (adapted from \cite{thombre2015}).}
+        \label{fig:irnss}
+    \end{center}
+\end{figure}
+
+\section{Experimental GNSS networks}
+
+Recentemente, com o avanço dos nanossatélites, o crescimento de dispositivos com conectividade e a Internet das coisas (IoT), começou a surgir ideias de implantação de redes privadas e em baixa órbita de sistemas de GNSS, seja para atender propósitos específicos ou de uso geral. Considerando, começam a surgir iniciativas de empresas para a utilzação de pequenos satélites para esse tipo de aplicação, o que vai de encontro a ideia principal deste trabalho.
+
+Dentre essas iniciativas, pode-se destacar duas startups que possuem propostas similares: TrustPoint\footnote{\href{https://www.trustpointgps.com/}{https://www.trustpointgps.com/}} e Xona Space Systems\footnote{\href{https://www.xonaspace.com/}{https://www.xonaspace.com/}}.
+
+A primeira tem como proposta o uso 
+
+Já a segunda \cite{aarestad2020}, propõe a implantação de redes privadas de GNSS, utilizando satélites em baixa órbita. Uma imagem conceitual de um dos satélites da rede pode ser vista na \autoref{fig:xona-satellite}.
+
+\begin{figure}[!ht]
+    \begin{center}
+        \includegraphics[width=0.8\columnwidth]{figures/xona-satellite}
         \caption{Xona Space Systems conceptual satellite.}
         \label{fig:xona-satellite}
     \end{center}
