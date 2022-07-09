@@ -33,6 +33,16 @@ Especificamente sobre as redes de GNSS, o uso de satélites de pequeno porte pod
 
 \subsection{Timing precision}
 
+% https://gssc.esa.int/navipedia/index.php/Precise_Time_Reference#cite_note-About-2
+
+GNSS technologies have a design dependence on accurate timing. The resolution of positioning equations depend on the accurate timestamping of GNSS messages and the four variables resolved by positioning equations are: time plus the 3D position coordinates. Each navigation satellite has atomic clocks that are synchronized from a master clock on the ground and the navigation messages are timestamped with the transmission time of the signal.
+
+This allows GNSS receivers to act as a worldwide synchronized time source with a precision that could only be maintained during long periods by expensive equipments. This enabled a wide set of applications that rely on GNSS synchronized precise time sources. These applications can range from network synchronization and optimization to encryption and digital signature of electronic data.
+
+The receiver's clocks, however, are small quartz oscillators like those found in a wristwatch. Quartz oscillators are very accurate when measuring times of less than a few seconds, but rather inaccurate over longer periods. The solution is to re-set the receiver’s time to the satellite’s time continuously. This is done by the receiver’s processor using an approximation method involving signals from at least four satellites \cite{about-satellite-nagivation}.
+
+The accuracy achieved by GNSS-based time synchronization using GPS is <40 ns 95 \% of time \cite{gps-standard}.
+
 \cite{sa45s}
 
 \begin{figure}[!ht]
