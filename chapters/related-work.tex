@@ -37,12 +37,20 @@ O GPS \cite{gps}, ou Global Positioning System, é o sistema de GNSS desenvolvid
 
 Atualmente o sistema é de uso civil e militar, mas até a década de 2000, o sistema possuía precisão propositalmente limitada para dispositivos de uso civil, sendo seu uso em capacidade máxima destinado somente a aplicações militares. Por questões de segurança, erros propositais eram induzidos aos sinais transmitidos de forma que receptores de uso geral não possuíssem precisão menor que 90 metros.
 
+O GPS opera em três frequências diferentes: 1575,42, 1227,6 e 1176,45 MHz, com larguras de banda igual a 15,345, 11 e 12,5 MHz, respectivamente. Utilizando essas frequências, operam quatro tipos de sinais: L1 C/A, L1C, L2 C, L2 P e L5 (os sinais L2 C e L2 P operam na mesma frquência: 1227,6 MHz). Os sinais são transmitidos através da modulação BPSK.
+
 
 \subsection{GLONASS}
 
-O GLONASS, sigla de \textit{Globalnaya navigatsionnaya sputnikovaya sistema} (ou Sistema de Navegação Global por Satélite) \cite{glonass}, é o sistema de GNSS criado e mantido pela Rússia.
+O GLONASS, sigla de \textit{Globalnaya navigatsionnaya sputnikovaya sistema} (ou Sistema de Navegação Global por Satélite) \cite{glonass}, é o sistema de GNSS criado e mantido pela Rússia. Este foi o segundo sistema de navegação global a entrar em operação, logo após o GPS.
 
-GLONASS (Globalnaya Navigazionnaya Sputnikovaya Sistema, or Global Navigation Satellite System) is a global GNSS owned and operated by the Russian Federation. The fully operational system consists of 24+ satellites.
+O projeto começou a ser desenvolvido em 1976, ainda na União Soviética. A implantação do sistema iniciou em 1982, e foi até 1995. Este é o projeto é o mais caro mantido pela agência espacial russa (Roscosmos), consumindo atualmente um terço do seu orçamento.
+
+O GLONASS opera em uma órbita circula a uma altitude de 19100 km e com uma inclinação de 64,8$^{\circ}$, resultando em período de 11 horas e 15 minutos. Sendo um sistema desenvolvido principalmente para cobrir o território russo (mas além disso, com cobertura global), este é adequado para operações em altas latitudes, onde o GPS pode apresentar problemas \cite{polischuk2002}.
+
+O GLONASS opera com quatro tipos de sinais: L1 C/A (1598,0625-1609,3125 MHz), L2 C (1242,9375-1251,6875 MHz), L2 P (1242,9375-1251,6875 MHz) e L3 OC (1202,025 MHz). Da mesma forma que o GPS, os sinais são transmitidos através da modulação BPSK.
+
+Atualmente, é comum o uso de receptores que são compatíveis tanto com GPS quanto com o GLONASS. Desta forma, tem-se uma maior disponibilidade de satélites, fazendo com que tenha-se uma maior rapidez na obtenção dos dados de posicionamento e uma maior precisão destes dados. Receptores deste tipo são mais robustos que receptores operando em uma única rede \cite{angrisano2012}.
 
 \subsection{Galileo}
 
@@ -57,8 +65,9 @@ O \textit{BeiDou Navigation Satellite System}, ou BDS \cite{beidou}, é o sistem
 BeiDou, or BDS, is a global GNSS owned and operated by the People's Republic of China. BDS was formally commissioned in 2020. The operational system consists of 35 satellites. BDS was previously called Compass.
 
 
+\section{Comparison}
 
-A \autoref{tab:networks-comparison} compara as principais características dos sistemas de GNSS apresentados acima.
+Considerando as informações apresentadas acima a respeito dos sistemas de naveção em operação atualmente, a \autoref{tab:networks-comparison} compara as principais características de todos os sistemas apresentados.
 
 \begin{table*}[!h]
     \centering
@@ -97,7 +106,7 @@ A \autoref{tab:networks-comparison} compara as principais características dos s
 
 \section{Local networks}
 
-.
+Another type of network also in operation today is the network that operates locally, covering a specific region of the globe. With this characteristic, there are two in operation nowadays: QZSS and IRNSS networks. Both are described below.
 
 \subsection{QZSS}
 
