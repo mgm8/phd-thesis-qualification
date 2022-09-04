@@ -60,12 +60,29 @@ O sistema operara oferencendo dois tipos de serviço: um de precisão mais baixa
 
 O sistema funciona através de três tipos de sinais: E1 (1575,42 MHz), E5 (1191,795 MHz) e E6 (1278,75 MHz). O sinal E5 é subdividido em dois outros: E5a (1176,45 MHz) e E5b (1207,14 MHz).
 
+\begin{table*}[!h]
+    \centering
+    \begin{tabular}{lcc}
+        \toprule[1.5pt]
+        \textbf{Signal} & \textbf{Frequency} & \textbf{Modulation} \\
+        \midrule
+        E1  & 1575,42 MHz & CBOC \\
+        E5a & 1176,45 MHz & AltBOC \\
+        E5b & 1207,14 MHz & AltBOC \\
+        E6  & 1278,75 MHz & BPSK \\
+        \bottomrule[1.5pt]
+    \end{tabular}
+    \caption{Galileo signals configuration.}
+    \label{tab:galileo-signals}
+\end{table*}
+
+Atualmente, boa parte dos receptores GNSS comerciais e de uso civil têm suporte a rede Galileo. Por exemplo, grande parte dos smartphones modernos têm capacidade de trabalhar com múltiplas redes de GNSS, sendo a Galileo uma delas.
+
 \subsection{BDS}
 
 O \textit{BeiDou Navigation Satellite System}, ou BDS \cite{beidou}, é o sistema de GNSS chinês.
 
 BeiDou, or BDS, is a global GNSS owned and operated by the People's Republic of China. BDS was formally commissioned in 2020. The operational system consists of 35 satellites. BDS was previously called Compass.
-
 
 \section{Comparison}
 
@@ -166,7 +183,7 @@ Recentemente, com o avanço dos nanossatélites, o crescimento de dispositivos c
 
 Dentre essas iniciativas, pode-se destacar duas startups que possuem propostas similares: TrustPoint\footnote{\href{https://www.trustpointgps.com/}{https://www.trustpointgps.com/}} e Xona Space Systems\footnote{\href{https://www.xonaspace.com/}{https://www.xonaspace.com/}}.
 
-A primeira tem como proposta o uso 
+A primeira tem como proposta a criação de uma rede GNSS totalmente de uso comercial e com melhorias em relação ao GPS atual, como aumento de desempenho, melhorias de segurança e maior robustes. Mais especificamente, a proposta inclui um sistema anti-spoof and anti-jam, e um tempo menor para fixar o sinal. Além disso, para a implementação da rede propõe-se o uso de satélites de pequeno porte, do tipo microsatélite.
 
 Já a segunda \cite{aarestad2020}, propõe a implantação de redes privadas de GNSS, utilizando satélites em baixa órbita. Uma imagem conceitual de um dos satélites da rede pode ser vista na \autoref{fig:xona-satellite}.
 
