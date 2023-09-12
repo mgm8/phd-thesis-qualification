@@ -1,6 +1,6 @@
 SRC=main
-VERSION=v0.0
-TARGET=thesis-${VERSION}
+VERSION=v1.0
+TARGET=slb-phd-qual-${VERSION}
 
 ifndef BUILD_DIR
 	BUILD_DIR=build
